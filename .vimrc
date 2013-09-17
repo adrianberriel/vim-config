@@ -27,9 +27,29 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-set statusline=2
-set t_Co=256
+if has("gui_gtk")
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+"  set lines=40
+endif
+
+set number
+set laststatus=2
 set cursorline
+set t_Co=256
 colorscheme molokai
 set listchars=trail:·,tab:▸\ ,eol:↲
 set list
+let mapleader=","
+set wildmenu
+"set wildmode=list:longest,full
+
+" Clipboard
+set clipboard=unnamed
+nnoremap y "+y
+vnoremap y "+y
+
+"" Plugins configuration
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
