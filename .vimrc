@@ -9,6 +9,8 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'ctrlp.vim'
+Bundle 'UltiSnips'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -31,7 +33,8 @@ if has("gui_gtk")
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r
-"  set lines=40
+  set guioptions-=l
+  "  set lines=40
 endif
 
 set number
