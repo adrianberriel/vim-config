@@ -9,8 +9,9 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'ctrlp.vim'
-Bundle 'UltiSnips'
+"Bundle 'UltiSnips'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -46,6 +47,7 @@ set listchars=trail:·,tab:▸\ ,eol:↲
 set list
 let mapleader=","
 set wildmenu
+set omnifunc=syntaxcomplete#Complete
 "set wildmode=list:longest,full
 
 " Clipboard
@@ -56,3 +58,7 @@ vnoremap y "+y
 "" Plugins configuration
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:NERDTreeChDirMode = 2
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+"au FileType python set omnifunc=pythoncomplete#Complete
+"let g:SuperTabDefaultCompletionType = "context"
