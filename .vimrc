@@ -8,13 +8,14 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
-Bundle 'ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -40,6 +41,7 @@ if has("gui_running")
   set guioptions-=L
   set lines=50
   set columns=100
+  set guifont=Liberation\ Mono\ for\ Powerline\ 10
 endif
 
 set number
@@ -63,15 +65,18 @@ vnoremap y "+y
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeChDirMode = 2
+let g:Powerline_symbols = 'fancy'
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#use_splits_not_buffers = "left"
-let g:jedi#popup_on_dot = 0
+"let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#popup_on_dot = 0
 
 " Mappings
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
