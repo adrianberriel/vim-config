@@ -80,3 +80,5 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <c-tab> :bn<CR>
+nnoremap <c-s-tab> :bp<CR>
