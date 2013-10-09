@@ -78,7 +78,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-h> <c-w>h
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <c-tab> :bn<CR>
-nnoremap <c-s-tab> :bp<CR>
+nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>u :GundoToggle<cr>
+nnoremap <c-tab> :bn<cr>
+nnoremap <c-s-tab> :bp<cr>
