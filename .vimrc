@@ -5,14 +5,15 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'chriskempson/base16-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
-"Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -41,14 +42,15 @@ if has("gui_running")
   set guioptions-=L
   set lines=50
   set columns=100
-  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
+  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+  colorscheme base16-default
 endif
 
 set number
 set laststatus=2
 set cursorline
 set t_Co=256
-colorscheme molokai
+colorscheme Tomorrow-Night
 set listchars=trail:·,tab:▸\ ,eol:↲
 set list
 let mapleader=","
@@ -65,10 +67,10 @@ vnoremap y "+y
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeChDirMode = 2
-let g:Powerline_symbols = 'fancy'
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
+let g:airline_powerline_fonts=1
 "let g:jedi#use_tabs_not_buffers = 0
 "let g:jedi#use_splits_not_buffers = "left"
 "let g:jedi#popup_on_dot = 0
