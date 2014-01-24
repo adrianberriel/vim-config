@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-"Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
@@ -17,6 +16,8 @@ Bundle 'ervandew/supertab'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'changesPlugin'
+Bundle 'krisajenkins/vim-pipe'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -24,7 +25,7 @@ set encoding=utf-8
 set showcmd                     " display incomplete commands
 
 "" Whitespace
-set nowrap                      " don't wrap lines
+set wrap
 set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
@@ -42,7 +43,7 @@ if has("gui_running")
   set guioptions-=L
   set lines=50
   set columns=100
-  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 11
+  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
   colorscheme base16-default
 endif
 
