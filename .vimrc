@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'changesPlugin'
 Bundle 'krisajenkins/vim-pipe'
+Bundle 'majutsushi/tagbar'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
