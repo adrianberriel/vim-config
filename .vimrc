@@ -11,8 +11,9 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'chriskempson/base16-vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -71,7 +72,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeChDirMode = 2
 "let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 "au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 let g:airline_powerline_fonts=1
 "let g:jedi#use_tabs_not_buffers = 0
 "let g:jedi#use_splits_not_buffers = "left"

@@ -1,7 +1,7 @@
-vim-globant
+Vim configuration
 ===========
 
-Vim configuration for my Globant workflow
+Vim configuration for my workflow
 
 Once cloned:
 
@@ -11,3 +11,9 @@ Once cloned:
 Inside vim:
 
     :BundleInstall
+
+For YouCompleteMe:
+
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.sh --clang-completer
+
