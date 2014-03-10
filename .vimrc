@@ -20,6 +20,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'changesPlugin'
 Bundle 'krisajenkins/vim-pipe'
 Bundle 'majutsushi/tagbar'
+Bundle 'fholgado/minibufexpl.vim'
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -74,6 +75,7 @@ let g:airline_powerline_fonts=1
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:changes_autocmd=1
 
 " Mappings
 "nnoremap <c-j> <c-w>j
