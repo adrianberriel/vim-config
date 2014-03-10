@@ -58,7 +58,7 @@ set listchars=trail:·,tab:▸\ ,eol:↲
 set list
 let mapleader=","
 set wildmenu
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 "set wildmode=list:longest,full
 
 " Clipboard
@@ -70,21 +70,18 @@ vnoremap y "+y
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeChDirMode = 2
-"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-"au FileType python set omnifunc=pythoncomplete#Complete
-"let g:SuperTabDefaultCompletionType = "context"
 let g:airline_powerline_fonts=1
-"let g:jedi#use_tabs_not_buffers = 0
-"let g:jedi#use_splits_not_buffers = "left"
-"let g:jedi#popup_on_dot = 0
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Mappings
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-nnoremap <c-h> <c-w>h
+"nnoremap <c-j> <c-w>j
+"nnoremap <c-k> <c-w>k
+"nnoremap <c-l> <c-w>l
+"nnoremap <c-h> <c-w>h
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>u :GundoToggle<cr>
-nnoremap <c-tab> :bn<cr>
-nnoremap <c-s-tab> :bp<cr>
+"nnoremap <c-tab> :bn<cr>
+"nnoremap <c-s-tab> :bp<cr>
