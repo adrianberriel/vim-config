@@ -46,7 +46,7 @@ if has("gui_running")
   set guioptions-=L
   set lines=50
   set columns=100
-  set guifont=Inconsolata-dz\ for\ Powerline\ Medium\ 10
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h13
   colorscheme base16-default
 endif
 
