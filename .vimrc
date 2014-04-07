@@ -21,6 +21,7 @@ Bundle 'changesPlugin'
 Bundle 'krisajenkins/vim-pipe'
 Bundle 'majutsushi/tagbar'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'tpope/vim-fugitive'
 
 " Color themes
 Bundle 'molokai'
