@@ -1,23 +1,29 @@
-Vim configuration
-===========
+# Vim configuration #
 
-Vim configuration for my workflow
+My vim config for my needs
 
-Once cloned:
+## Prerequisites ##
+
+    the_silver_searcher
+    node.js
+
+## Once cloned ##
 
     git submodule init
     git submodule update
 
-Inside vim:
+## Inside vim ##
 
     :BundleInstall
 
-Post installation:
+## Post installation ##
 
     Link .vim and .vimrc to $HOME
 
+
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
+
 
     cd ~/.vim/bundle/tern_for_vim
     npm install
