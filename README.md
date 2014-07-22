@@ -12,8 +12,12 @@ Inside vim:
 
     :BundleInstall
 
-For YouCompleteMe:
+Post installation:
+
+    Link .vim and .vimrc to $HOME
 
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh --clang-completer
 
+    cd ~/.vim/bundle/tern_for_vim
+    npm install

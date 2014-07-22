@@ -14,9 +14,13 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
+" Then npm install inside bundle
+Bundle 'mattn/emmet-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
+Bundle 'Raimondi/delimitMate'
 Bundle 'changesPlugin'
 Bundle 'krisajenkins/vim-pipe'
 Bundle 'majutsushi/tagbar'
@@ -66,7 +70,7 @@ set listchars=trail:·,tab:▸\ ,eol:↲
 set list
 let mapleader=","
 set wildmenu
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 "set wildmode=list:longest,full
 
 " Clipboard
