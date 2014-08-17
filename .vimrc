@@ -1,37 +1,42 @@
 set nocompatible                " choose no compatibility with legacy vi
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Plugin manager
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 " Plugins
 Bundle 'bling/vim-airline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
-Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
-" Then npm install inside bundle
 Bundle 'mattn/emmet-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
+Bundle 'tmhedberg/matchit'
 Bundle 'changesPlugin'
 Bundle 'krisajenkins/vim-pipe'
 Bundle 'majutsushi/tagbar'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-fugitive'
+Bundle 'rking/ag.vim'
+"Bundle 'ap/vim-css-color'         "Funca mal
+Bundle 'vim-ruby/vim-ruby'
 
 " Color themes
 Bundle 'molokai'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'chriskempson/base16-vim'
+Bundle 'altercation/vim-colors-solarized'
 
+call vundle#end()
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
 set encoding=utf-8
@@ -39,7 +44,7 @@ set showcmd                     " display incomplete commands
 
 "" Whitespace
 set wrap
-set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -65,7 +70,9 @@ set number
 set laststatus=2
 set cursorline
 set t_Co=256
-colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night
+set background=dark
+colorscheme solarized
 set listchars=trail:·,tab:▸\ ,eol:↲
 set list
 let mapleader=","
@@ -81,8 +88,15 @@ vnoremap y "+y
 "" Plugins configuration
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
+" Set no max file limit
+let g:ctrlp_max_files = 0
+" Search from current directory instead of project root
+let g:ctrlp_working_path_mode = 0
+
 let g:NERDTreeChDirMode = 2
+
 let g:airline_powerline_fonts=1
+
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -95,8 +109,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>u :GundoToggle<cr>
-"nnoremap <c-tab> :bn<cr>
-"nnoremap <c-s-tab> :bp<cr>
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
 cmap w!! %!sudo tee > /dev/null %
+
+"Idea para cambiar de plugins
+"set runtimepath-=~/.vim/bundle/vimacs
