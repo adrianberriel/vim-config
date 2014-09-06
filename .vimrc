@@ -24,7 +24,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tmhedberg/matchit'
 Plugin 'mhinz/vim-signify'
 Plugin 'krisajenkins/vim-pipe'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 "For js tags: npm install -g git://github.com/ramitos/jsctags.git
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
@@ -32,8 +32,13 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+
+if has("macunix")
+  Plugin 'rizzatti/dash.vim'
+endif
 
 " Plugins to research and test
 "Plugin 'Lokaltog/vim-easymotion'
@@ -76,33 +81,41 @@ set smartcase                   " ... unless they contain at least one capital l
 set number
 "set colorcolumn=80             "Setea la linea de fin
 set laststatus=2
-set cursorline
+"set cursorline
 set t_Co=256
 set background=dark
 colorscheme base16-default
 "colorscheme Tomorrow-Night
 "colorscheme solarized
-set listchars=trail:·,tab:▸\ ,eol:↲
+set listchars=trail:·,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set list
 let mapleader=","
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
 "set wildmode=list:longest,full
 "set hidden
+set nobackup
+set noswapfile
+set ttyfast
 
 " Clipboard
 set clipboard=unnamed
 nnoremap y "+y
 vnoremap y "+y
 
+set tags+=tags;~
+
 "" Plugins configuration
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_show_hidden = 1
 
 let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
@@ -116,13 +129,21 @@ let g:netrw_liststyle = 3
 
 let g:signify_vcs_list = [ 'git' ]
 
+let g:notes_directories = ['~/Dropbox/Notas']
+let g:notes_suffix = '.note'
+
+let g:syntastic_check_on_wq = 0
+
 " Mappings
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap <leader>u :GundoToggle<cr>
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
+nnoremap <leader>* :set hlsearch!<cr>
+nnoremap <leader>a :Ag
 "nnoremap p p=`]
 cmap w!! %!sudo tee > /dev/null %
+inoremap jj <esc>
 
 "Idea para cambiar de plugins
 "set runtimepath-=~/.vim/bundle/vimacs
