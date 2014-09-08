@@ -13,7 +13,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-vinegar'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/emmet-vim'
@@ -59,6 +60,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
+
+"set rtp-=~/.vim/bundle/YouCompleteMe
 
 filetype plugin indent on       " load file type plugins + indentation
 syntax enable
@@ -111,11 +114,14 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-let g:ctrlp_show_hidden = 1
+"let g:ctrlp_show_hidden = 1
 
-let g:airline_powerline_fonts=1
-"let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+let g:airline_detect_whitespace = 0
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
