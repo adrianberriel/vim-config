@@ -10,11 +10,10 @@ Plugin 'gmarik/Vundle.vim', {'pinned': 1}
 " Plugins
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-vinegar'
-Plugin 'ervandew/supertab'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/emmet-vim'
@@ -67,6 +66,7 @@ filetype plugin indent on       " load file type plugins + indentation
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
+set mouse=a
 
 "" Whitespace
 set wrap
@@ -95,6 +95,7 @@ set list
 let mapleader=","
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
+set completeopt-=preview
 "set wildmode=list:longest,full
 "set hidden
 set nobackup
@@ -113,7 +114,8 @@ let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 "let g:ctrlp_show_hidden = 1
 
 let g:airline_powerline_fonts = 1
@@ -139,6 +141,10 @@ let g:notes_directories = ['~/Dropbox/Notas']
 let g:notes_suffix = '.note'
 
 let g:syntastic_check_on_wq = 0
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#disable_auto_complete = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Mappings
 nnoremap <leader>b :CtrlPBuffer<cr>
