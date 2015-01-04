@@ -10,7 +10,8 @@ Plugin 'gmarik/Vundle.vim', {'pinned': 1}
 " Plugins
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplete.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-vinegar'
@@ -34,7 +35,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
 
 if has("macunix")
   Plugin 'rizzatti/dash.vim'
@@ -51,6 +51,7 @@ endif
 "Plugin 'mklabs/vim-backbone'
 "Plugin 'airblade/vim-gitgutter'
 "Plugin 'changesPlugin'
+"Plugin 'xolox/vim-notes'
 
 " Color themes
 Plugin 'molokai'
@@ -125,10 +126,10 @@ let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:UltiSnipsExpandTrigger = "<c-j>"
-let g:UltiSnipsJumpForwardTrigger = "<c-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-let g:UltiSnipsListSnippets = "<c-g>"
+"let g:UltiSnipsExpandTrigger = "<c-j>"
+"let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+"let g:UltiSnipsListSnippets = "<c-g>"
 
 let g:indent_guides_guide_size = 0
 
@@ -142,9 +143,9 @@ let g:notes_suffix = '.note'
 
 let g:syntastic_check_on_wq = 0
 
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#disable_auto_complete = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#disable_auto_complete = 1
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Mappings
 nnoremap <leader>b :CtrlPBuffer<cr>
