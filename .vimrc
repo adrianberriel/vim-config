@@ -37,6 +37,8 @@ Plugin 'xolox/vim-notes'
 " vim-notes dependency
 Plugin 'xolox/vim-misc'
 
+Plugin 'flazz/vim-colorschemes'
+
 if has("macunix")
   Plugin 'rizzatti/dash.vim'
 endif
@@ -53,12 +55,6 @@ endif
 "Plugin 'airblade/vim-gitgutter'
 "Plugin 'changesPlugin'
 "Plugin 'Shougo/neocomplete.vim'
-
-" Color themes
-Plugin 'molokai'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'chriskempson/base16-vim'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -89,9 +85,11 @@ set laststatus=2
 "set cursorline
 set t_Co=256
 set background=dark
-colorscheme base16-default
 "colorscheme Tomorrow-Night
+"colorscheme Tomorrow
 "colorscheme solarized
+"colorscheme molokai
+colorscheme 0x7A69_dark
 set listchars=trail:·,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set list
 let mapleader=","
