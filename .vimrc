@@ -7,15 +7,14 @@ call vundle#begin()
 " Plugin manager
 Plugin 'gmarik/Vundle.vim', {'pinned': 1}
 
-" Plugins
+" General Plugins
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-vinegar' " Improved netwr
 Plugin 'scrooloose/syntastic'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -29,13 +28,20 @@ Plugin 'krisajenkins/vim-pipe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+
+" Python plugins
+Plugin 'klen/python-mode'
+
+" Javascript Plugins
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'marijnh/tern_for_vim'
+"cd bundle/tern_for_vim
+"npm install
 
 Plugin 'xolox/vim-notes'
-" vim-notes dependency
-Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-misc' " vim-notes dependency
 
 Plugin 'flazz/vim-colorschemes'
 
@@ -47,14 +53,6 @@ endif
 "Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'ntpeters/vim-better-whitespace'
-
-" Plugins used in the past
-"Plugin 'ap/vim-css-color'         "Funca mal
-"Plugin 'vim-ruby/vim-ruby'
-"Plugin 'mklabs/vim-backbone'
-"Plugin 'airblade/vim-gitgutter'
-"Plugin 'changesPlugin'
-"Plugin 'Shougo/neocomplete.vim'
 
 call vundle#end()
 
@@ -68,7 +66,7 @@ set mouse=a
 
 "" Whitespace
 set wrap
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
 set autoindent
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
@@ -89,18 +87,20 @@ set background=dark
 "colorscheme Tomorrow
 "colorscheme solarized
 "colorscheme molokai
-colorscheme 0x7A69_dark
+"colorscheme 0x7A69_dark
+colorscheme Monokai
 set listchars=trail:·,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set list
 let mapleader=","
 set wildmenu
 set omnifunc=syntaxcomplete#Complete
-set completeopt-=preview
+"set completeopt-=preview
 "set wildmode=list:longest,full
 "set hidden
 set nobackup
 set noswapfile
 set ttyfast
+set scrolloff=3
 
 " Clipboard
 set clipboard=unnamed
@@ -125,32 +125,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:UltiSnipsExpandTrigger = "<c-j>"
-let g:UltiSnipsJumpForwardTrigger = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:UltiSnipsListSnippets = "<c-g>"
-
-"function! g:UltiSnips_Complete()
-    "call UltiSnips#ExpandSnippet()
-    "if g:ulti_expand_res == 0
-        "if pumvisible()
-            "return "\<C-n>"
-        "else
-            "call UltiSnips#JumpForwards()
-            "if g:ulti_jump_forwards_res == 0
-               "return "\<TAB>"
-            "endif
-        "endif
-    "endif
-    "return ""
-"endfunction
-
-"au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsListSnippets="<c-e>"
-"" this mapping Enter key to <C-y> to chose the current highlight item 
-"" and close the selection list, same as other IDEs.
-"" CONFLICT with some plugins like tpope/Endwise
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 let g:indent_guides_guide_size = 0
 
@@ -163,9 +140,12 @@ let g:notes_suffix = '.note'
 
 let g:syntastic_check_on_wq = 0
 
-"let g:neocomplete#enable_at_startup = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:pymode_rope = 0
+let g:pymode_folding = 0
+let g:pymode_indent = 1
+let g:pymode_lint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
 
 " Mappings
 nnoremap <leader>b :CtrlPBuffer<cr>
