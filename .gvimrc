@@ -1,10 +1,10 @@
 if has("gui_gtk2")
   set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
 endif
-if has("gui_mac")
-  set guifont=Inconsolata-dz\ for\ Powerline:h13
+if has("gui_macvim")
+  set guifont=Sauce\ Code\ Powerline:h14
 endif
-colorscheme base16-ocean
+colorscheme Monokai
 set guioptions-=m
 set guioptions-=T
 set mouse=a
