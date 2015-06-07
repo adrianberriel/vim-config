@@ -83,12 +83,7 @@ set laststatus=2
 "set cursorline
 set t_Co=256
 set background=dark
-"colorscheme Tomorrow-Night
-"colorscheme Tomorrow
-"colorscheme solarized
-"colorscheme molokai
-"colorscheme 0x7A69_dark
-colorscheme Monokai
+colorscheme gruvbox
 set listchars=trail:·,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set list
 let mapleader=","
