@@ -1,11 +1,28 @@
 {
   "libs": [
     "browser",
+    "ecma5",
+    "ecma6",
     "underscore",
     "jquery"
-      ],
-    "loadEagerly": [
-      "**/*.js"
-      ],
-    "plugins": {}
+  ],
+  "loadEagerly": [
+    "absolute/or/relative/path/to/your/js/**/*.js"
+  ],
+  "dontLoad": [
+    "absolute/or/relative/path/to/your/js/**/*.js"
+  ],
+  "plugins": {
+    "complete_strings": {},
+    "node": {},
+    "lint": {},
+    "angular": {},
+    "requirejs": {
+      "baseURL": "./app/scripts",
+      "paths": {}
+    },
+    "doc_comment": {
+      "fullDocs": true
+    }
+  }
 }

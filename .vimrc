@@ -9,7 +9,7 @@ Plugin 'gmarik/Vundle.vim', {'pinned': 1}
 
 " General Plugins
 Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -23,6 +23,9 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tmhedberg/matchit'
 Plugin 'mhinz/vim-signify'
 Plugin 'krisajenkins/vim-pipe'
+Plugin 'xolox/vim-easytags'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 "Plugin 'majutsushi/tagbar'
 "For js tags: npm install -g git://github.com/ramitos/jsctags.git
 Plugin 'tpope/vim-fugitive'
@@ -33,10 +36,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'klen/python-mode'
 
 " Javascript Plugins
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'matthewsimo/angular-vim-snippets'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'chrisgillis/vim-bootstrap3-snippets'
 "cd bundle/tern_for_vim
 "npm install
 
@@ -66,7 +70,7 @@ set mouse=a
 
 "" Whitespace
 set wrap
-set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+set tabstop=2 shiftwidth=2
 set autoindent
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
@@ -83,7 +87,8 @@ set laststatus=2
 "set cursorline
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme grb256
 set listchars=trail:·,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set list
 let mapleader=","
@@ -102,7 +107,13 @@ set clipboard=unnamed
 nnoremap y "+y
 vnoremap y "+y
 
-set tags+=tags;~
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_rails = 1
+
+let g:used_javascript_libs = 'jquery,angularjs,angularui,angularuirouter'
 
 "" Plugins configuration
 let g:ctrlp_map = '<leader>p'
@@ -142,6 +153,8 @@ let g:pymode_indent = 1
 let g:pymode_lint = 0
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
+
+"let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Mappings
 nnoremap <leader>b :CtrlPBuffer<cr>
