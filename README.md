@@ -4,31 +4,36 @@ My vim config for my needs
 
 ## Prerequisites ##
 
+    cmake
+    ctags
     the_silver_searcher
     node.js
 
 ### If we want jsctags ###
 
+    (Not using this currently)
+
     git clone -b nodejs-0.10.x-compatibility --recursive https://github.com/tow8ie/doctorjs.git
     cd doctorjs
     make install
 
-## Once cloned ##
+## Install Vundle ##
 
     git submodule init
     git submodule update
 
-## Inside vim ##
+## Install Plugins ##
 
-    :BundleInstall
+    Inside vim:
+    :PluginInstall
 
 ## Post installation ##
 
-    Link .vim and .vimrc to $HOME
+    Link .vim .vimrc .gvimrc to $HOME
 
 
     cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
+    ./install.py --clang-completer
 
 
     cd ~/.vim/bundle/tern_for_vim
